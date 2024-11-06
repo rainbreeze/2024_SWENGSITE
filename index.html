@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Lecture List</h1>
+    </header>
+
+    <!-- Lecture Lists Section (2개 위, 2개 아래) -->
+    <section id="lectureSection">
+        <div class="lecture-list">
+            <h2>Lecture 1 (객체지향)</h2>
+            <ul id="lectureList1" class="lecture-items"></ul>
+        </div>
+
+        <div class="lecture-list">
+            <h2>Lecture 2 (UML)</h2>
+            <ul id="lectureList2" class="lecture-items"></ul>
+        </div>
+
+        <div class="lecture-list">
+            <h2>Lecture 3 (SCRUM)</h2>
+            <ul id="lectureList3" class="lecture-items"></ul>
+        </div>
+
+        <div class="lecture-list">
+            <h2>Lecture 4 (XP)</h2>
+            <ul id="lectureList4" class="lecture-items"></ul>
+        </div>
+    </section>
+
+    <!-- Add New Lecture Form -->
+    <section id="addLectureSection">
+        <h2>Add New Lecture</h2>
+        <form id="addLectureForm">
+            <label for="lectureNumber">Lecture Number:</label>
+            <input type="number" id="lectureNumber" name="lecture" required min="1" max="4">
+            <br>
+            <label for="lectureContent">Content:</label>
+            <input type="text" id="lectureContent" name="content" required>
+            <br>
+            <label for="lectureAddress">Address:</label>
+            <input type="text" id="lectureAddress" name="address" required>
+            <br>
+            <button type="submit">Add Lecture</button>
+        </form>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
